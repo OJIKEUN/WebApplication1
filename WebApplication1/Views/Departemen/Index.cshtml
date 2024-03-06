@@ -1,0 +1,101 @@
+﻿@model IEnumerable<WebApplication1.Models.Departemen>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Ethanolamine</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            @* <th>
+                @Html.DisplayNameFor(model => model.ConsumableName)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.Brand)
+            </th>
+            @* <th>
+                @Html.DisplayNameFor(model => model.Packaging)
+            </th> *@
+            @* <th>
+                @Html.DisplayNameFor(model => model.Unit)
+            </th> *@
+            @* <th>
+                @Html.DisplayNameFor(model => model.MinimumStock)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.ExpiredDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReceivedQuantity)
+            </th>
+            @* <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.IncomingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConsumptionCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentStock)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.ConsumableName)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.Packaging)
+            </td> *@
+            @* <td>
+                @Html.DisplayFor(modelItem => item.Unit)
+            </td> *@
+            @* <td>
+                @Html.DisplayFor(modelItem => item.MinimumStock)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpiredDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReceivedQuantity)
+            </td>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.IncomingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConsumptionCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentStock)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
