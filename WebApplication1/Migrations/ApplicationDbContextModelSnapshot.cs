@@ -41,9 +41,6 @@ namespace WebApplication1.Migrations
                     b.Property<int>("ConsumptionCost")
                         .HasColumnType("int");
 
-                    b.Property<int>("CurrentStock")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("ExpiredDate")
                         .HasColumnType("datetime2");
 

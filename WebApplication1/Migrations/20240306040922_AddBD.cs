@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WebApplication1.Migrations
 {
     /// <inheritdoc />
-    public partial class ChemicalToDb : Migration
+    public partial class AddBD : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -26,8 +26,7 @@ namespace WebApplication1.Migrations
                     ReceivedQuantity = table.Column<int>(type: "int", nullable: false),
                     Price = table.Column<int>(type: "int", nullable: false),
                     IncomingDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ConsumptionCost = table.Column<int>(type: "int", nullable: false),
-                    CurrentStock = table.Column<int>(type: "int", nullable: false)
+                    ConsumptionCost = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

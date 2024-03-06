@@ -54,7 +54,7 @@ namespace WebApplication1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ConsumableName,Brand,Packaging,Unit,MinimumStock,ExpiredDate,ReceivedQuantity,Price,IncomingDate,ConsumptionCost,CurrentStock")] Departemen departemen)
+        public async Task<IActionResult> Create([Bind("Id,ConsumableName,Brand,Packaging,Unit,MinimumStock,ExpiredDate,ReceivedQuantity,Price,IncomingDate,ConsumptionCost")] Departemen departemen)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace WebApplication1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ConsumableName,Brand,Packaging,Unit,MinimumStock,ExpiredDate,ReceivedQuantity,Price,IncomingDate,ConsumptionCost,CurrentStock")] Departemen departemen)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ConsumableName,Brand,Packaging,Unit,MinimumStock,ExpiredDate,ReceivedQuantity,Price,IncomingDate,ConsumptionCost")] Departemen departemen)
         {
             if (id != departemen.Id)
             {

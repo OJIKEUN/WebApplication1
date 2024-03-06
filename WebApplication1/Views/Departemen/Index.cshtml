@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Ethanolamine</h1>
+<h1>Index</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -13,40 +13,34 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            @* <th>
                 @Html.DisplayNameFor(model => model.ConsumableName)
-            </th> *@
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Brand)
             </th>
-            @* <th>
+            <th>
                 @Html.DisplayNameFor(model => model.Packaging)
-            </th> *@
-            @* <th>
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Unit)
-            </th> *@
-            @* <th>
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.MinimumStock)
-            </th> *@
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.ExpiredDate)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ReceivedQuantity)
             </th>
-            @* <th>
+            <th>
                 @Html.DisplayNameFor(model => model.Price)
-            </th> *@
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.IncomingDate)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ConsumptionCost)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CurrentStock)
             </th>
             <th></th>
         </tr>
@@ -55,40 +49,34 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            @* <td>
                 @Html.DisplayFor(modelItem => item.ConsumableName)
-            </td> *@
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Brand)
             </td>
-            @* <td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Packaging)
-            </td> *@
-            @* <td>
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Unit)
-            </td> *@
-            @* <td>
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.MinimumStock)
-            </td> *@
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ExpiredDate)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ReceivedQuantity)
             </td>
-            @* <td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Price)
-            </td> *@
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IncomingDate)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ConsumptionCost)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CurrentStock)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

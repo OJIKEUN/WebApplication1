@@ -12,8 +12,8 @@ using WebApplication1.Data;
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240305141307_ChemicalToDb")]
-    partial class ChemicalToDb
+    [Migration("20240306040922_AddBD")]
+    partial class AddBD
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,9 +42,6 @@ namespace WebApplication1.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ConsumptionCost")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CurrentStock")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("ExpiredDate")
