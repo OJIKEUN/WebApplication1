@@ -7,18 +7,19 @@ namespace WebApplication1.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+		private object departemens;
 
-        public HomeController(ILogger<HomeController> logger)
+		public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
 
         public IActionResult Index()
         {
-            return View();
-        }
+			return View(departemens);
+		}
 
-        public IActionResult Privacy()
+		public IActionResult Privacy()
         {
             return View();
         }

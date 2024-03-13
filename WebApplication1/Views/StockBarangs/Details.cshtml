@@ -1,4 +1,4 @@
-﻿@model Departemen
+﻿@model WebApplication1.Models.StockBarang
 
 @{
     ViewData["Title"] = "Details";
@@ -7,9 +7,15 @@
 <h1>Details</h1>
 
 <div>
-    <h4>Departemen</h4>
+    <h4>StockBarang</h4>
     <hr />
     <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NamaBarang)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NamaBarang)
+        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.In)
         </dt>
@@ -21,6 +27,12 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Out)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Balance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Balance)
         </dd>
     </dl>
 </div>

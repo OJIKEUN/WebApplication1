@@ -1,48 +1,21 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema; // Pastikan menggunakan namespace ini untuk [NotMapped]
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication1.Models
+public class Departemen
 {
-    public class Departemen
-    {
-        [Key]
-        public int Id { get; set; }
+    [Key]
+    public int Id { get; set; }
 
-        [Required]
-        public required string ConsumableName { get; set; }
-        [Required]
-        public required string Brand { get; set; }
-        [Required]
-        public int Packaging { get; set; }
-        [Required]
-        public required string Unit { get; set; }
-        [Required]
-        public int MinimumStock { get; set; }
-        [Required]
-        public DateTime ExpiredDate { get; set; }
-        [Required]
-        public int ReceivedQuantity { get; set; }
-        [Required]
-        public int Price { get; set; }
-        [Required]
-        public DateTime IncomingDate { get; set; }
-        [Required]
-        public int ConsumptionCost { get; set; }
+    [Required]
+    public int In { get; set; }
 
-        // Properti ini tidak akan dipetakan ke database.
-        [NotMapped]
-        public int CurrentStock
-        {
-            get
-            {
-                // Ini adalah logika untuk menghitung CurrentStock.
-                // Asumsikan Anda memiliki cara untuk mendapatkan nilai awal CurrentStock jika diperlukan.
-                return (CurrentStock + ReceivedQuantity) - ConsumptionCost;
-            }
-        }
-    }
+    [Required]
+    public int Out { get; set; }
+
+    // This property is not mapped to the database.
+    [NotMapped]
+    public int CurrentStock { get; set; }
 }
-
 
 
 

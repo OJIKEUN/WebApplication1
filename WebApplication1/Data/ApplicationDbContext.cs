@@ -15,5 +15,8 @@ namespace WebApplication1.Data
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 		}
-	}
+	    public DbSet<WebApplication1.Models.StockBarang> StockBarang { get; set; } = default!;
+	    public DbSet<WebApplication1.Models.Barang> Barang { get; set; } = default!;
+        public object StockBarangs { get; internal set; }
+    }
 }	

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Departemen>
+﻿@model IEnumerable<WebApplication1.Models.Barang>
 
 @{
     ViewData["Title"] = "Index";
@@ -7,19 +7,30 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Create New Item</a>
 </p>
+@foreach (var item in Model)
+{
+    <div class="card">
+        <div class="card-header">
+            @item.NamaBarang
+        </div>
+        <div class="card-body">
+            <p>Balance: @item.Balance</p>
+        </div>
+    </div>
+}
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NamaBarang)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.In)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Out)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CurrentStock)
             </th>
             <th></th>
         </tr>
@@ -28,13 +39,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.NamaBarang)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.In)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Out)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CurrentStock)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
